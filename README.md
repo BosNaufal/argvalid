@@ -10,6 +10,7 @@ You can install it via NPM
 npm install argvalid
 ```
 
+## Usage
 ```javascript
 import argvalid from 'argvalid';
 
@@ -73,6 +74,7 @@ let obj = {
   customValidator(custom) {
     const valid = argvalid({ custom },{
       required: true,
+      // Just put it
       validator(val) {
         if (val.length === 3) return true
         return false
@@ -110,6 +112,8 @@ let obj = {
       },
 
     ])
+
+    console.log(typeof valid === 'object'); // true
   }
 
 }
