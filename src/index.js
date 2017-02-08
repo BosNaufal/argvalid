@@ -102,8 +102,8 @@ function validate(obj, validation) {
       ctor = Boolean
       break;
     case 'object':
-      let isArray = typeof target.length === 'number'
-      if (isArray) ctor = Array
+      let instanceIsArray = typeof target.length === 'number'
+      if (instanceIsArray) ctor = Array
       else {
         if (isArray(type)) throw new Error(`[Argvalid]: Array Types With Custom Constructor Is Not Supported Yet`)
         ctor = type
